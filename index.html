@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<title>變形圈圈</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -125,7 +126,7 @@
 				center: center,
 				radius: 300,
 				selected: false,
-				fillColor: '#211f51',
+				fillColor: '#2c1e71',
 				opacity: 1
 			});
 
@@ -133,8 +134,8 @@
 				center: center,
 				radius: 200,
 				selected: false,
-				fillColor: '#ac2b11',
-				opacity: 0.7
+				fillColor: '#d53939',
+				opacity: 0.6
 			});
 
 		var path3 = new Path.Circle({
@@ -177,6 +178,7 @@
 			path1.setOriginSeg();
 			path2.setOriginSeg();
 			path3.setOriginSeg();
+
 		}
 		
 		function onMouseMove(event) {
@@ -186,8 +188,8 @@
 		
 		function onFrame(event) {
 			path1.sinSeed(event, 1);
-			path2.sinSeed(event, 0.6);
-			path3.sinSeed(event, 0.4);
+			path2.sinSeed(event, 0.7);
+			path3.sinSeed(event, 0.5);
 		}
 
 		initializePath();
@@ -212,7 +214,7 @@
 		#paperCanvas{
 			height:100%;
 			width:100%;
-			background-color: hsla(250, 30%, 16%, 1);
+			background-color: hsla(250, 35%, 16%, 1);
 		}
 		#displayrCanvas{
 			height:100%;
